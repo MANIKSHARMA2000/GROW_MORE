@@ -1,0 +1,479 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+   border: 1px solid red;
+    height: 500px;
+    width: 100%;
+    background-color: #010101;
+    background-size: cover;
+    background-position: center;
+}
+nav{
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+   
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    margin: 10px;
+}
+nav a:hover{
+    color: #ffcc00;
+}
+section h1{
+    font-size: larger;
+    
+}
+.information{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
+.information-2{
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+.trackmarkets{
+    border: 1px solid red;
+    color: white;
+    
+}
+.information-2inside{
+    flex-wrap: wrap;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: x-large;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: white;
+    margin: 0px 30px;
+}
+.quotes{
+    color: #ffcc00;
+    margin-right: 30px;
+    margin-top: 50px;
+    font-size: xx-large;
+    font-weight: 100;
+    
+}
+.quotes p{
+    
+    margin: 0%;
+}
+.footerbar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid red;
+    height: 600px;
+    background-color: #010101;
+}
+.about-us{
+    
+    border: 1px solid red;
+    color: white;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 600px;
+    
+    padding: 20px 20px;
+}
+.about-us h1{
+    margin: 0px;
+    padding: 0px;
+
+}
+.logo2{
+    width: 300px;
+    
+    border: 1px solid red;
+    color: white;
+}
+.logo{
+    width: 300px;
+    border: 1px solid red;
+    color: white;
+}
+.contentcontainer{
+    border: 1px solid red;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.cc-1{
+    background-color: #010101;
+    color: white;
+    letter-spacing: 3px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    
+    width: 530px;
+    font-size: xx-large;
+    font-weight: 900;
+    padding: 5px 5px ;
+}
+.global-markets{
+
+    height: 100%;
+    width: 100%;
+
+    background-image: url('https://github.githubassets.com/images/modules/site/home/globe.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.cc-1 p{
+    margin: 0px;
+}
+.cc-2{
+    flex-grow: 2;
+
+    width: 462px
+}
+.cc2-1{
+
+    background-color:#010101;
+    width: 100%;
+    height: 50%;
+
+}
+.topcompanies img{
+    height: 50px;
+    width: 50px;
+}
+.cc2-2{
+    border: 1px solid red;
+    background-color: #010101;
+    width: 100%;
+    height: 50%;
+
+
+}
+.invest-stocks{
+    
+
+
+    color: white;
+    letter-spacing: 3px;
+    font-size: xx-large;
+    font-weight: 300;
+
+}
+.invest-stocks-heading p{
+    margin: 0px;
+}
+.invest-stocks-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.invest-now-btn{
+    
+    position: relative;
+    left: 100px;
+    top: 10px;
+}
+.invest-now-btn button{
+    border-radius: 10px;
+    color: #ffcc00;
+    border: 0.5px solid #ffcc00;
+    background-color: #010101;
+    width:200px;
+    height: 100px;
+    font-size: larger;
+    font-weight: 100;
+
+}
+.invest-now-btn button:hover{
+    color: #010101;
+    background-color: #ffcc00;
+}
+.fang{
+    height: 100px;
+    width: 100%;
+    background-image: url('https://www.alphavantage.co/static/img/selectedpartners.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.top-performers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    color: white;
+}
+.tata-logo{
+
+    background-image: url(assets/tata-group-logo-for-vehicles.jpg);
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.mahindra-logo{
+
+    background-image: url(assets/Mahindra-Mahindra-Emblem.jpg);
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.AB-logo{
+    background-image: url(assets/Aditya_Birla_Group_Old.webp);
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.adani-logo{
+
+    height: 120px;
+    width: 120px;
+    background-image: url(assets/adani-1-logo-black-and-white.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.mrf-logo{
+
+    background-image: url(assets/mrf.jpg);
+    height: 120px;
+    width: 120px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.data-invest-crypto{
+    display: flex;
+    flex-wrap: wrap;
+    
+    border: 1px solid red;
+    color: white;
+    letter-spacing: 3px;
+    font-size: xx-large;
+    font-weight: 300;
+}
+.DIC-crypto-info{
+    color: white;
+    letter-spacing: 3px;
+    font-size: xx-large;
+    font-weight: 300;
+}
+.crypto-info{
+    position: relative;
+    top: 20px;
+    flex-grow: 2;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid red;
+    height:130px;
+    width: 200px;
+}
+.crypto-info p{
+    font-family: 'Roboto', sans-serif;
+    color: #ffcc00;
+    font-size:small;
+    font-weight: 100;
+
+}
+.crypto-invest-btn{
+    border: 1px solid red;
+    height:150px;
+    width: 230px;
+
+}
+.crypto-invest-btn button{
+    border-radius: 10px;
+    color: #ffcc00;
+    border: 0.5px solid #ffcc00;
+    background-color: #010101;
+    width:200px;
+    height: 100px;
+    font-size: larger;
+    font-weight: 100;
+
+}
+.crypto-invest-btn button:hover{
+    color: #010101;
+    background-color: #ffcc00;
+}
+.top-cryptos{
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+}
+.data-invest-crypto p{
+    margin: 0px;
+}
+.btc-logo{
+    background-image: url(assets/bitcoin-logo-black-background-4k-xe.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20px;
+
+    height: 120px;
+
+    width: 120px;
+
+}
+.eth-logo{
+    background-image: url(assets/HD-wallpaper-ethereum-glitter-logo-cryptocurrency-grid-metal-background-ethereum-creative-cryptocurrency-signs-ethereum-logo-thumbnail-2.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20px;
+
+    height: 120px;
+
+    width: 120px;
+
+}
+.chainlink-logo{
+    background-image: url(assets/chainlink_white_logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 30px;
+    height: 100px;
+    width: 100px;
+}
+.solana-logo{
+    background-image: url(assets/solana.jpg.webp);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 20px;
+    height: 120px;
+    width: 120px;
+}
+.uniswap-logo{
+    position: relative;
+    top: 20px;
+
+    height: 120px;
+    width: 120px;
+    background-image: url(assets/uniswap-logo-400x400.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+.tron-logo{
+    position: relative;
+    top: 20px;
+
+    height: 120px;
+    width: 120px;
+    background-image: url(assets/tron-cryptocurrency-trx-logo-wallpaper-preview.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+
+}
+.cardano-logo{
+    position: relative;
+    top: 20px;
+
+    height: 120px;
+    width: 120px;
+    background-image: url(assets/cardano.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+footer{
+    
+    color: white;
+    height: 450px;
+    background-color: #010101;
+    width: 100%;
+}
+.footerinfo{
+    margin-bottom: 50px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+}
+.infodata{
+    height: 200px;
+    width: 475px;
+    border: 1px solid red;
+}
+.infostickers{
+    height: 200px;
+    width: 475px;
+    border: 1px solid red;
+
+}
+.moreinfo{
+    height: 200px;
+    width: 475px;
+    border: 1px solid red;
+
+}
+.footerlinks{
+
+    font-weight: 900;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+.footerlinks a{
+    color: white;
+    text-decoration: none;
+}
+.footerlinks a:hover{
+    color: #ffcc00;
+}
+.copyright{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.copyright a{
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+}
