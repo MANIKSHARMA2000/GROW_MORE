@@ -13,6 +13,9 @@ let exchange = 0
 let usStocks 
 let nsestocks
 let Cryptonames
+let NseWholeData
+let usStockpriceData 
+
 
 // import data for nsdaq
 fetch("us-data.json").then(response =>response.json())
@@ -31,7 +34,11 @@ const options = {
 }
 fetch('https://latest-stock-price.p.rapidapi.com/any', options)
 .then(response =>response.json())
-.then(data => {console.log(data); nsestocks = data.map(data=>data.symbol)})
+.then(data => {console.log(data);
+    NseWholeData = data
+    console.log(NseWholeData[1].previousClose);
+    
+    nsestocks = data.map(data=>data.symbol)})
 
 //fetch data for crypto coins
 fetch('https://api.coincap.io/v2/assets')
@@ -43,12 +50,10 @@ console.log(Cryptonames);})
 NSEbtn.addEventListener("click",()=>{exchange = 1})
 NSDQbtn.addEventListener("click",()=>{exchange = 2})
 BNBSbtn.addEventListener("click",()=>{exchange = 3})
-function GetPriceData(nsdqsymbol){
-    fetch(`https://finnhub.io/api/v1/quote?symbol=${nsdqsymbol}&token=cdmujmiad3i9q6h6852gcdmujmiad3i9q6h68530`).then(response=>response.json()).then(data=>console.log(data))
-}
-function UpdateWatchlist(str){
+ 
+function UpdateWatchlist(str1,str2,str3){
     RenderWatchlist.innerHTML += `<div id="item-watchlist">
-    <p>${str}</p>
+    <p>${str1}  ${str2}  ${str3}</p>
     <div id="btns">
         <button>B</button>
         <button>S</button>
@@ -106,9 +111,39 @@ myinputEl.addEventListener("click",Renderlist)
 ulEl.addEventListener('click',(e)=>{
     console.log(e.path[0].innerHTML);
     sname = e.path[0].innerHTML
+    //for nse
+    if(exchange ===1){
+    let previousclose
+    let pchange
+    for(let i=0; i<NseWholeData.length; i++){
+        if(sname === NseWholeData[i].symbol){
+            previousclose = NseWholeData[i].previousClose
+            pchange = NseWholeData[i].pChange
+        }
+    }
+    UpdateWatchlist(sname,previousclose,pchange)
+    }
+    //for nsdq
+    if(exchange ===2){
+        let smbl
+        let pc
+        let percentChange
+        for(let i=0; i<usStocks.length; i++){
+            if(sname === usStocks[i].Name ){
+                 smbl = usStocks[i].Symbol
+            }}
+            fetch(`https://finnhub.io/api/v1/quote?symbol=${smbl}&token=cdmujmiad3i9q6h6852gcdmujmiad3i9q6h68530`).then(response=>response.json()).then(data=>{console.log(data)
+            pc = data.pc
+            percentChange = data.dp
+        }).then(setTimeout(()=>UpdateWatchlist(smbl,pc,percentChange),1000))
+    }
+    //for crypto
+    if(exchange ===3){
+
+        fetch(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=true`).then(response=>response.json()).then(data=>console.log(data))
+    }
     
-    GetPriceData(sname);
-    UpdateWatchlist(sname)
+    
 })
 listboxEl.addEventListener("mouseleave",()=>{
     ulEl.innerHTML = ''
