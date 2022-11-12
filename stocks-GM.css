@@ -13,7 +13,7 @@ body{
     display: flex;
     flex-wrap: wrap;
 }
-.watchlist{
+#watchlist{
     border: 1px solid gray;
     height: 800px;
     width: 35%;
@@ -66,13 +66,13 @@ body{
  #listitem:hover{
     background-color: gainsboro;
  }
- .item-watchlist{
-    border: 1px solid rgb(42, 224, 21);
+ #item-watchlist{
+    border: .5px solid black;
     display: flex;
     justify-content: space-between;
     align-content: center;
  }
- .btns{
+ #btns{
 
     width: 250px;
     display: flex;

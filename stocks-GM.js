@@ -3,6 +3,8 @@ let ulEl = document.getElementById('ul-el')
 let AddBtn = document.getElementById('add-btn')
 let Listitem = document.getElementById('listitem')
 let RenderWatchlist = document.getElementById("render-watchlist")
+
+
 let listboxEl = document.getElementById("listbox")
 let NSEbtn = document.getElementById("nse-btn")
 let NSDQbtn = document.getElementById("nsdq-btn")
@@ -41,18 +43,19 @@ console.log(Cryptonames);})
 NSEbtn.addEventListener("click",()=>{exchange = 1})
 NSDQbtn.addEventListener("click",()=>{exchange = 2})
 BNBSbtn.addEventListener("click",()=>{exchange = 3})
-function GetPriceData(){
-    fetch(`https://finnhub.io/api/v1/quote?symbol=${sname}&token=cdmujmiad3i9q6h6852gcdmujmiad3i9q6h68530`).then(response=>response.json()).then(data=>console.log(data))
+function GetPriceData(nsdqsymbol){
+    fetch(`https://finnhub.io/api/v1/quote?symbol=${nsdqsymbol}&token=cdmujmiad3i9q6h6852gcdmujmiad3i9q6h68530`).then(response=>response.json()).then(data=>console.log(data))
 }
 function UpdateWatchlist(str){
-    RenderWatchlist.innerHTML += `<div class="item-watchlist">
+    RenderWatchlist.innerHTML += `<div id="item-watchlist">
     <p>${str}</p>
-    <div class="btns">
+    <div id="btns">
         <button>B</button>
         <button>S</button>
         <button >C</button>
     </div>
    </div>`
+  
 }
 function filterfunction(){
     let filter = myinputEl.value.toUpperCase();
@@ -77,7 +80,7 @@ function Renderlist(){
     for(let i=0; i<usStocks.length; i++){
         UsStocknames += `<li  id="listitem">${usStocks[i].Name}</li>`;
 }
-ulEl.innerHTML = UsStocknames
+    ulEl.innerHTML = UsStocknames
     }
     //nse stocks
     if(exchange ===1){
@@ -103,7 +106,8 @@ myinputEl.addEventListener("click",Renderlist)
 ulEl.addEventListener('click',(e)=>{
     console.log(e.path[0].innerHTML);
     sname = e.path[0].innerHTML
-    GetPriceData();
+    
+    GetPriceData(sname);
     UpdateWatchlist(sname)
 })
 listboxEl.addEventListener("mouseleave",()=>{

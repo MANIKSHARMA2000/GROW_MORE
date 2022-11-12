@@ -14,12 +14,13 @@
 
     </div>
     <div class="main">
-        <div class="watchlist">
+        <div id="watchlist">
+            <span>Choose Exhchange To Proceed</span>
+            <button  id="nsdq-btn">nsdq</button>
+            <button id="nse-btn">nse</button>
+            <button id="bnbs-btn">bnbs</button>
             <div class="searchbox">
                 <input onkeyup="filterfunction()"  id="input-el" placeholder="Search Stocks" type="text">
-                <button id="nsdq-btn">nsdq</button>
-                <button id="nse-btn">nse</button>
-                <button id="bnbs-btn">bnbs</button>
             </div>
             <div id="listbox">
                 <ul  id="ul-el"></ul>
