@@ -5,7 +5,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .header{
-   border: 1px solid red;
+
     height: 500px;
     width: 100%;
     background-color: #010101;
@@ -15,13 +15,14 @@ body{
 nav{
     background-color: #010101;
     width: 100%;
-    border: 1px solid red;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: 10px;
     position: fixed;
     top: 0;
+    
    
 }
 nav a{
@@ -38,7 +39,7 @@ section h1{
     
 }
 .information{
-    border: 1px solid red;
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -48,21 +49,21 @@ section h1{
 }
 .information-2{
     max-height: 700px;
-    border: 1px solid red;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 .trackmarkets{
 
-    border: 1px solid red;
+    
     font-size: xx-large;
     font-weight: 700;
     color: #ffcc00;
     
 }
 .quotes{
-    border: 1px solid red;
+    
     font-size: xx-large;
     font-weight: 700;
     color: #ffcc00;
@@ -88,13 +89,13 @@ section h1{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    border: 1px solid red;
+    
     height: 400px;
     background-color: #010101;
 }
 .about-us{
     
-    border: 1px solid red;
+    
     color: white;
 
     justify-content: center;
@@ -111,16 +112,16 @@ section h1{
 .logo2{
     width: 300px;
     
-    border: 1px solid red;
+    
     color: white;
 }
 .logo{
     width: 300px;
-    border: 1px solid red;
+    
     color: white;
 }
 .contentcontainer{
-    border: 1px solid red;
+    
     width: 100%;
     height: 700px;
     display: flex;
@@ -170,7 +171,7 @@ section h1{
     width: 50px;
 }
 .cc2-2{
-    border: 1px solid red;
+    
     background-color: #010101;
     width: 100%;
     height: 50%;
@@ -208,12 +209,12 @@ section h1{
 .invest-now-btn button{
     border-radius: 10px;
     color: #ffcc00;
-    border: 0.5px solid #ffcc00;
+    border: 2px solid #ffcc00;
     background-color: #010101;
-    width:200px;
-    height: 100px;
-    font-size: larger;
-    font-weight: 100;
+    width:100px;
+    height: 50px;
+    font-size: medium;
+    font-weight: 900;
 
 }
 .invest-now-btn button:hover{
@@ -286,7 +287,7 @@ section h1{
     display: flex;
     flex-wrap: wrap;
     
-    border: 1px solid red;
+    
     color: white;
     letter-spacing: 3px;
     font-size: xx-large;
@@ -299,35 +300,41 @@ section h1{
     font-weight: 300;
 }
 .crypto-info{
+
     overflow: scroll;
     top: 20px;
     flex-grow: 2;
     border: 1px solid red;
-    height:130px;
-    width: 200px;
+    height:80px;
+    width: 70px;
 }
 .crypto-info p{
     
     color: white;
     font-size:small;
-    font-weight: 100;
+    font-weight: 500;
 
 }
 .crypto-invest-btn{
-    border: 1px solid red;
+    
     height:150px;
     width: 230px;
 
 }
+#cagr{
+    font-size: small;
+    font-weight: 700;
+}
 .crypto-invest-btn button{
+    margin-left: 120px;
     border-radius: 10px;
     color: #ffcc00;
-    border: 0.5px solid #ffcc00;
+    border: 2px solid #ffcc00;
     background-color: #010101;
-    width:200px;
-    height: 100px;
-    font-size: larger;
-    font-weight: 100;
+    width:100px;
+    height: 50px;
+    font-size: medium;
+    font-weight: 900;
 
 }
 .crypto-invest-btn button:hover{
@@ -448,18 +455,18 @@ footer{
 .infodata{
     height: 200px;
     width: 475px;
-    border: 1px solid red;
+    
 }
 .infostickers{
     height: 200px;
     width: 475px;
-    border: 1px solid red;
+    
 
 }
 .moreinfo{
     height: 200px;
     width: 475px;
-    border: 1px solid red;
+    
 
 }
 .footerlinks{
@@ -570,4 +577,10 @@ footer{
         height: 100px;
         width: 100px;
     }
+  }
+  @media only screen and (max-width: 300px){
+    .footerbar{
+        margin-top: 180px;
+    }
+
   }
