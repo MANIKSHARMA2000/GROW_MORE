@@ -1,4 +1,5 @@
 body{
+    background-color: #010101;
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', sans-serif;
@@ -12,12 +13,14 @@ body{
     background-position: center;
 }
 nav{
+    background-color: #010101;
+    width: 100%;
     border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
     padding: 10px;
-    position: sticky;
+    position: fixed;
     top: 0;
    
 }
@@ -44,18 +47,30 @@ section h1{
     color: white;
 }
 .information-2{
+    max-height: 700px;
     border: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .trackmarkets{
+
     border: 1px solid red;
-    color: white;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #ffcc00;
     
+}
+.quotes{
+    border: 1px solid red;
+    font-size: xx-large;
+    font-weight: 700;
+    color: #ffcc00;
+
 }
 .information-2inside{
     flex-wrap: wrap;
-    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,25 +81,15 @@ section h1{
     color: white;
     margin: 0px 30px;
 }
-.quotes{
-    color: #ffcc00;
-    margin-right: 30px;
-    margin-top: 50px;
-    font-size: xx-large;
-    font-weight: 100;
-    
-}
-.quotes p{
-    
-    margin: 0%;
-}
+
+
 .footerbar{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     border: 1px solid red;
-    height: 600px;
+    height: 400px;
     background-color: #010101;
 }
 .about-us{
@@ -94,7 +99,7 @@ section h1{
 
     justify-content: center;
     flex-wrap: wrap;
-    width: 600px;
+    max-width: 600px;
     
     padding: 20px 20px;
 }
@@ -172,6 +177,11 @@ section h1{
 
 
 }
+#about-us{
+    font-size: large;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
 .invest-stocks{
     
 
@@ -191,9 +201,9 @@ section h1{
 }
 .invest-now-btn{
     
-    position: relative;
-    left: 100px;
-    top: 10px;
+
+    margin-left: 100px;
+    margin-top: 10px;
 }
 .invest-now-btn button{
     border-radius: 10px;
@@ -289,17 +299,16 @@ section h1{
     font-weight: 300;
 }
 .crypto-info{
-    position: relative;
+    overflow: scroll;
     top: 20px;
     flex-grow: 2;
-    font-family: 'Times New Roman', Times, serif;
     border: 1px solid red;
     height:130px;
     width: 200px;
 }
 .crypto-info p{
-    font-family: 'Roboto', sans-serif;
-    color: #ffcc00;
+    
+    color: white;
     font-size:small;
     font-weight: 100;
 
@@ -326,6 +335,8 @@ section h1{
     background-color: #ffcc00;
 }
 .top-cryptos{
+    overflow: scroll;
+
     display: flex;
     flex-wrap: wrap;
     color: white;
@@ -341,8 +352,8 @@ section h1{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
-    top: 20px;
+
+    margin-top: 20px;
 
     height: 120px;
 
@@ -354,8 +365,8 @@ section h1{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
-    top: 20px;
+
+    margin-top: 20px;
 
     height: 120px;
 
@@ -367,8 +378,8 @@ section h1{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
-    top: 30px;
+
+    margin-top: 30px;
     height: 100px;
     width: 100px;
 }
@@ -377,14 +388,14 @@ section h1{
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
-    top: 20px;
+
+    margin-top: 20px;
     height: 120px;
     width: 120px;
 }
 .uniswap-logo{
-    position: relative;
-    top: 20px;
+
+    margin-top: 20px;
 
     height: 120px;
     width: 120px;
@@ -396,8 +407,8 @@ section h1{
 
 }
 .tron-logo{
-    position: relative;
-    top: 20px;
+
+    margin-top: 20px;
 
     height: 120px;
     width: 120px;
@@ -409,8 +420,8 @@ section h1{
 
 }
 .cardano-logo{
-    position: relative;
-    top: 20px;
+
+    margin-top: 20px;
 
     height: 120px;
     width: 120px;
@@ -423,7 +434,7 @@ section h1{
 footer{
     
     color: white;
-    height: 450px;
+    height: 160px;
     background-color: #010101;
     width: 100%;
 }
@@ -477,3 +488,86 @@ footer{
     font-weight: 500;
     text-decoration: none;
 }
+@media only screen and (max-width: 460px) {
+    nav{
+        justify-content: center;
+        font-size: small;
+        font-weight: 300;
+    }
+    .header{margin-top: 50px;
+        height: 600px;
+        font-size: medium;
+
+    }
+    .information-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .trackmarkets{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        font-size: medium;
+    }
+    .information-2inside{   
+        font-size: medium;
+
+    }
+    .quotes{
+        font-size: medium;
+    }
+    .contentcontainer{
+        margin-top: 80px;
+    }
+    .cc-1 p{
+        font-size: medium;
+        font-weight: 500;
+    }
+    .invest-stocks-heading{
+        font-size: medium;
+        font-weight: 300;
+
+    }
+    .invest-now-btn a button,.crypto-invest-btn a button{
+        font-size: small;
+        font-weight: bolder;
+        width: 100px;
+        height: 50px;
+
+
+    }
+    .crypto-invest-btn{
+        height: 70px;
+        width: 100px;
+    }
+    .tata-logo,.mahindra-logo,.AB-logo,.adani-logo,.mrf-logo{
+        height: 50px ;
+        width: 50px;
+    }
+    .btc-logo,.cardano-logo,.eth-logo,.solana-logo,.chainlink-logo,.tron-logo,.uniswap-logo{
+        height: 40px;
+        width: 40px;
+    }
+    .footerbar{
+        margin-top: 100px;
+    }
+    .about-us h1{
+        font-size: medium;
+        font-weight: 500;
+    }
+    #about-us{
+        font-size: small;
+        font-weight: 300;
+    }
+    .footerlinks{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .global-markets{
+        height: 100px;
+        width: 100px;
+    }
+  }
