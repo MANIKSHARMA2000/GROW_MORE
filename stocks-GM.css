@@ -59,7 +59,7 @@ body{
 #listbox{
     position: absolute;
     min-height: 0px;
-    max-height: 380px;
+    max-height: 362px;
     width: inherit;
     overflow:scroll;
 }
@@ -348,11 +348,14 @@ th{
     background-color: rgb(157, 72, 72);
 }
 #orderplacingcard{
+    background-color: whitesmoke;
     font-size: x-large;
     height: 166px;
     width: 500px;
-    border: 1px solid black;
+    border: 1px solid rgb(157, 72, 72);
     border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 #order-card-info p{
     margin: 2px;

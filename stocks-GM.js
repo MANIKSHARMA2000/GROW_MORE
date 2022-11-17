@@ -8,8 +8,6 @@ let listboxEl = document.getElementById("listbox")
 let NSEbtn = document.getElementById("nse-btn")
 let NSDQbtn = document.getElementById("nsdq-btn")
 let BNBSbtn = document.getElementById("bnbs-btn")
-
-
 let Table = document.getElementById("table")
 let DBtn = document.getElementById("d-btn")
 let orderbox = document.getElementById("main-2-two-1")
@@ -33,6 +31,9 @@ fetch("us-data.json").then(response =>response.json())
 .then(data => {console.log(data)
     usStocks = data
 });
+
+
+
 //fetch data for NSE
 const options = {
 	method: 'GET',
@@ -45,8 +46,9 @@ fetch('https://latest-stock-price.p.rapidapi.com/any', options)
 .then(response =>response.json())
 .then(data => {console.log(data);
     NseWholeData = data
-    console.log(NseWholeData[1].previousClose);
-    nsestocks = data.map(data=>data.symbol)})
+    nsestocks = data.map(data=>data.symbol)}).catch(console.log("error"))
+
+
 //fetch data for crypto coins
 fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=true')
 .then(response =>response.json()).then(data => {console.log(data)
@@ -69,6 +71,12 @@ BNBSbtn.addEventListener("click",()=>{exchange = 3
     NSDQbtn.style.backgroundColor = "whitesmoke"
     BNBSbtn.style.backgroundColor = "#353839"
 Renderlist()})
+
+listboxEl.addEventListener("mouseleave",()=>{
+    ulEl.innerHTML = ''
+})
+
+myinputEl.addEventListener("click",Renderlist)
 
 function closePannel(){
     orderbox.innerHTML = ""
@@ -170,7 +178,7 @@ function UpdateWatchlist(exchange,str1,str2,str3){
 function RemoveItemWatchlist(){
     RenderWatchlist.addEventListener('click',(e)=>{
        let o =  e.path[3].firstElementChild.firstElementChild.textContent
-       console.log(o);
+
         if(RenderWatchlist.innerHTML!=""){
             const w = document.getElementById(o)
             w.remove() 
@@ -197,7 +205,7 @@ function filterfunction(){
 function Renderlist(){
     //US STOCK
     if(exchange===2){
-    let UsStocknames
+    let UsStocknames = ""
     for(let i=0; i<usStocks.length; i++){
         UsStocknames += `<li  id="listitem">${usStocks[i].Name}</li>`;
 }
@@ -205,14 +213,15 @@ function Renderlist(){
     }
     //nse stocks
     if(exchange ===1){
-        let insertNseStockNames
+        let insertNseStockNames = ""
         for(let i=0; i<nsestocks.length; i++){
             insertNseStockNames += `<li id="listitem">${nsestocks[i]}</li>`;
         }
         ulEl.innerHTML = insertNseStockNames
     }
+    //Cryptocurrencies
     if(exchange ===3){
-        let insertCryptoNames
+        let insertCryptoNames = ""
         for(let i=0; i<Cryptonames.length; i++){
             insertCryptoNames += `<li id="listitem">${Cryptonames[i]}</li>`;
         }
@@ -222,11 +231,11 @@ function Renderlist(){
         return false;
     }
 }
-myinputEl.addEventListener("click",Renderlist)
+
 
 ulEl.addEventListener('click',(e)=>{
     
-    console.log(e.path[0].innerHTML);
+
     sname = e.path[0].innerHTML
     //for nse
     if(exchange ===1){
@@ -262,10 +271,9 @@ ulEl.addEventListener('click',(e)=>{
             }}
     }
     ulEl.innerHTML = ""
+    myinputEl.value = ""
 })
-listboxEl.addEventListener("mouseleave",()=>{
-    ulEl.innerHTML = ''
-})
+
 
 
 
