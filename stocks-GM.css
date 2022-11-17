@@ -497,5 +497,8 @@ th{
         font-size: small;
 
     }
+    #listbox{
+        width: 350px;
+    }
   }
   
