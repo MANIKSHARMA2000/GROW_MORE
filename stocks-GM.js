@@ -314,7 +314,7 @@ ulEl.addEventListener('click',(e)=>{
 })
 //mobile phones
 
-ulEl.addEventListener('touchstart',(e)=>{
+ulEl.addEventListener('touchend',(e)=>{
     sname = e.path[0].innerHTML
     //for nse
     if(exchange ===1){
