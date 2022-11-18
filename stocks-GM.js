@@ -306,7 +306,7 @@ ulEl.addEventListener('click',(e)=>{
     if(exchange ===3){
         for(let i=0; i<cryptoWholeData.length; i++){
             if(sname === cryptoWholeData[i].name ){
-                 UpdateWatchlist("BNB",cryptoWholeData[i].symbol.toUpperCase(),cryptoWholeData[i].current_price,cryptoWholeData[i].price_change_24h)
+                 UpdateWatchlist("BNB",cryptoWholeData[i].symbol.toUpperCase(),cryptoWholeData[i].current_price,cryptoWholeData[i].price_change_percentage_24h)
             }}
     }
     ulEl.innerHTML = ""
