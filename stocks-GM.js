@@ -75,9 +75,7 @@ Renderlist()})
 listboxEl.addEventListener("mouseleave",()=>{
     ulEl.innerHTML = ''
 })
-listboxEl.addEventListener('touchcancel',()=>{
-    ulEl.innerHTML = ''
-})
+
 
 
 myinputEl.addEventListener("click",Renderlist)
@@ -238,8 +236,6 @@ function Renderlist(){
 
 
 ulEl.addEventListener('click',(e)=>{
-    
-
     sname = e.path[0].innerHTML
     //for nse
     if(exchange ===1){
@@ -278,10 +274,47 @@ ulEl.addEventListener('click',(e)=>{
     myinputEl.value = ""
 })
 
-//for mobiles
+ulEl.addEventListener('click',(e)=>{
+    sname = e.path[0].innerHTML
+    //for nse
+    if(exchange ===1){
+    let previousclose
+    let pchange
+    for(let i=0; i<NseWholeData.length; i++){
+        if(sname === NseWholeData[i].symbol){
+            previousclose = NseWholeData[i].previousClose
+            pchange = NseWholeData[i].pChange
+        }
+    }
+    UpdateWatchlist("NSE",sname,previousclose,pchange)
+    }
+    //for nsdq
+    if(exchange ===2){
+        let smbl
+        let pc
+        let percentChange
+        for(let i=0; i<usStocks.length; i++){
+            if(sname === usStocks[i].Name ){
+                 smbl = usStocks[i].Symbol
+            }}
+            fetch(`https://finnhub.io/api/v1/quote?symbol=${smbl}&token=cdmujmiad3i9q6h6852gcdmujmiad3i9q6h68530`).then(response=>response.json()).then(data=>{console.log(data)
+            pc = data.c
+            percentChange = data.dp
+        }).then(setTimeout(()=>UpdateWatchlist("NSDAQ",smbl,pc,percentChange),1000))
+    }
+    //for crypto
+    if(exchange ===3){
+        for(let i=0; i<cryptoWholeData.length; i++){
+            if(sname === cryptoWholeData[i].name ){
+                 UpdateWatchlist("BNB",cryptoWholeData[i].symbol.toUpperCase(),cryptoWholeData[i].current_price,cryptoWholeData[i].price_change_24h)
+            }}
+    }
+    ulEl.innerHTML = ""
+    myinputEl.value = ""
+})
+//mobile phones
+
 ulEl.addEventListener('touchstart',(e)=>{
-    
-
     sname = e.path[0].innerHTML
     //for nse
     if(exchange ===1){
@@ -319,12 +352,3 @@ ulEl.addEventListener('touchstart',(e)=>{
     ulEl.innerHTML = ""
     myinputEl.value = ""
 })
-
-
-
-
-
-
-
-
-
