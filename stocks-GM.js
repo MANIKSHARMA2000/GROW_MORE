@@ -75,6 +75,12 @@ Renderlist()})
 listboxEl.addEventListener("mouseleave",()=>{
     ulEl.innerHTML = ''
 })
+listboxEl.addEventListener('touchcancel',()=>{
+    ulEl.innerHTML = ''
+})
+listboxEl.addEventListener('touchend',()=>{
+    ulEl.innerHTML = ''
+})
 
 myinputEl.addEventListener("click",Renderlist)
 
